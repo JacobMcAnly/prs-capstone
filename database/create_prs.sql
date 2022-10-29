@@ -1,6 +1,8 @@
 USE master;
 GO
 
+-- Needs a drop if exists so that you can recreate this by just executing the script
+
 CREATE DATABASE PRS;
 
 USE PRS;
