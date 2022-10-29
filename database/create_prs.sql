@@ -1,7 +1,8 @@
 USE master;
 GO
 
--- Needs a drop if exists so that you can recreate this by just executing the script
+DROP DATABASE IF EXISTS PRS;
+GO
 
 CREATE DATABASE PRS;
 
@@ -59,6 +60,5 @@ CREATE TABLE RequestLines(
 Id			INT						 IDENTITY PRIMARY KEY NOT NULL,
 RequestId	INT						 REFERENCES Requests(Id) NOT NULL,
 ProductId	INT						 REFERENCES Products(Id) NOT NULL,
-Quantity	INT						 NOT NULL DEFAULT 1
+Quantity	INT						 DEFAULT 1 NOT NULL
 );
-
