@@ -62,3 +62,6 @@ RequestId	INT						 REFERENCES Requests(Id) NOT NULL,
 ProductId	INT						 REFERENCES Products(Id) NOT NULL,
 Quantity	INT						 DEFAULT 1 NOT NULL
 );
+
+ALTER TABLE Users
+ADD CONSTRAINT UniqueUsername UNIQUE (Username);
